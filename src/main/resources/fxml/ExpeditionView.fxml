@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="oskar.rojek.s25723.masproject.controller.ExpeditionController">
+
+   <HBox AnchorPane.bottomAnchor="75" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="75" AnchorPane.topAnchor="20"
+         spacing="10">
+      <Label style="-fx-font-size: 30px; -fx-font-weight: bold;" text="Exploration system" />
+      <HBox spacing="10.0">
+         <padding>
+            <Insets top="14" />
+         </padding>
+         <Label style="-fx-font-size: 14px;" text="Odkrywcy" />
+         <Label style="-fx-font-size: 14px;" text="Profesje" />
+         <Label style="-fx-font-size: 14px;" text="Krainy" />
+         <Label style="-fx-font-size: 14px;" text="Ekspedycje" />
+      </HBox>
+   </HBox>
+
+   <VBox AnchorPane.bottomAnchor="75" AnchorPane.leftAnchor="75" AnchorPane.rightAnchor="75" AnchorPane.topAnchor="75"
+         spacing="10" alignment="CENTER">
+      <Label alignment="CENTER" style="-fx-font-size: 30px; -fx-font-weight: bold;" text="Ekspedycje" />
+      <TableView fx:id="expeditionTableView" prefHeight="500.0" prefWidth="500.0" >
+         <columns>
+            <TableColumn fx:id="nameColumn" text="Nazwa" prefWidth="150"/>
+            <TableColumn fx:id="ruinColumn" text="Ruina" prefWidth="150"/>
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="108" />
+            <TableColumn fx:id="startDateColumn" text="Data Rozpoczęcia" prefWidth="120"/>
+            <TableColumn fx:id="endDateColumn" text="Data Zakończenia" prefWidth="120"/>
+         </columns>
+      </TableView>
+      <Button fx:id="planExpeditionButton" text="Zaplanuj ekspedycję" alignment="CENTER" onAction="#planExpedition" />
+   </VBox>
+</AnchorPane>
